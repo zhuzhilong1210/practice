@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,7 +25,7 @@ public class BaseController {
     }
 
     // 定义exceptionHandler 解决未被controller层吸收的exception
-   /* @ExceptionHandler(Exception.class)
+    @ExceptionHandler(Exception.class)
     @ResponseStatus(HttpStatus.OK)
     @ResponseBody
     protected ResponseEntity handlerException(HttpServletRequest request, Exception ex) {
@@ -38,5 +39,5 @@ public class BaseController {
             data.put("errMsg", EnumErrMsg.UNKNOWN.getMsg());
         }
         return ResponseEntity.ok(ResponseData.create("FAIL", data));
-    }*/
+    }
 }

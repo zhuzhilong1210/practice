@@ -6,7 +6,7 @@ package com.base.exception;
  * Comment:
  */
 
-public class BaseException extends Exception {
+public class BaseException extends RuntimeException {
     public EnumErrMsg enumErrMsg;
 
     public EnumErrMsg getEnumErrMsg() {
